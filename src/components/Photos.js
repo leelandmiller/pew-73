@@ -14,8 +14,8 @@ const filmStripQuery = graphql`
       edges {
         node {
           childImageSharp {
-            fixed(height: 400) {
-              ...GatsbyImageSharpFixed
+            fluid(maxHeight: 400) {
+              ...GatsbyImageSharpFluid
             }
           }
         }

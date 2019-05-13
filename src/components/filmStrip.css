@@ -65,17 +65,20 @@
 .film-strip-img {
   object-fit: cover;
   margin-bottom: 0px;
+  width: 100vw;
+  height: 100%;
 }
 
-/* .film-strip-img-wrapper:not(:first-child) {
+.film-strip-img-wrapper:not(:first-child) {
   border-left: 1px solid white;
 }
 .film-strip-img-wrapper:not(:last-child) {
   border-right: 1px solid white;
-} */
+}
 
 @media only screen and (min-width: 960px) {
   .film-strip-img {
+    width: unset;
     object-fit: unset;
   }
 }

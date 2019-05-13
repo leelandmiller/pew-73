@@ -79,7 +79,7 @@ class ImageFilmStrip extends Component {
                       height: '398px',
                       marginBottom: '0px'
                     }}
-                    fixed={img.fixed} />
+                    fluid={img.fluid} />
                 </div>
               );
             })
