@@ -18,6 +18,10 @@ export function useScroll() {
     return {
       pageYOffset
     };
+  } else {
+    return {
+      pageYOffset: 0
+    }
   }
 }
 
@@ -38,5 +42,9 @@ export function useResize(minWidth = 600) {
     }, []);
 
     return { desktop }
+  } else {
+    return {
+      desktop: true
+    }
   }
 }
