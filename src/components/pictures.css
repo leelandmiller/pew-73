@@ -14,6 +14,7 @@
   padding: 24px;
   display: flex;
   flex-direction: column;
+  z-index: 1000;
 }
 .address-bar .row {
   display: flex;
@@ -65,18 +66,22 @@
   justify-content: center;
   margin-left: -8px;
   margin-right: -8px;
+  flex-flow: wrap;
 }
-.photo-grid-img {
+.photo-grid-img-wrapper {
   width: 100%;
   padding: 8px;
   margin-bottom: 0px;
+}
+.photo-grid-img {
+  width: 100%;
 }
 
 @media screen and (min-width: 600px) {
   .photo-grid-wrapper {
     padding: 24px;
   }
-  .photo-grid-img {
+  .photo-grid-img-wrapper {
     width: 50%;
   }
 

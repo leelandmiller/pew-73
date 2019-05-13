@@ -1,19 +1,22 @@
 import React from 'react';
+import Img from 'gatsby-image';
 
 import './pictures.css'
 
 const PhotoGridView = ({ data }) => {
-  const images = data.allFile.edges.map(({ node }) => node)
+  const images = data.allFile.edges.map(({ node }) => node.childImageSharp)
 
   return (
-    <div>
+    <>
       {
         images.map((image, i) => (
-          <img alt="House" className="photo-grid-img"
-            key={i} src={image.publicURL} />
+          <div className="photo-grid-img-wrapper" key={i}>
+            <Img alt="House" className="photo-grid-img"
+              fluid={image.fluid}/>
+          </div>
         ))
       }
-    </div>
+    </>
   );
 }
 

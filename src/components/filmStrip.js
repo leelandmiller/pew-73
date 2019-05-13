@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby'
+import Img from "gatsby-image"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { camera } from '@fortawesome/free-solid-svg-icons';
 import { faCamera, faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
@@ -9,7 +10,7 @@ import './filmStrip.css'
 
 class ImageFilmStrip extends Component {
   state = {
-    images: this.props.data.allFile.edges.map(({ node }) => node)
+    images: this.props.data.allFile.edges.map(({ node }) => node.childImageSharp)
   }
 
   arrowClick = direction => () => {
@@ -71,8 +72,15 @@ class ImageFilmStrip extends Component {
           {
             images.map((img, i) => {
               return (
-                <img alt="House" className="film-strip-img"
-                  key={i} src={img.publicURL} />
+                <div key={i} className="film-strip-img-wrapper">
+                  <Img alt="House" className="film-strip-img"
+                    imgStyle={{
+                      width: '598px',
+                      height: '398px',
+                      marginBottom: '0px'
+                    }}
+                    fixed={img.fixed} />
+                </div>
               );
             })
           }

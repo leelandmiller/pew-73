@@ -13,10 +13,11 @@ const filmStripQuery = graphql`
     }, sort: { fields: name }) {
       edges {
         node {
-          id
-          name
-          publicURL
-          relativePath
+          childImageSharp {
+            fixed(height: 400) {
+              ...GatsbyImageSharpFixed
+            }
+          }
         }
       }
     }

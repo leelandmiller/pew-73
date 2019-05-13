@@ -6,7 +6,7 @@
   -webkit-overflow-scrolling: touch;
   transition: all 0.2s ease;
   background-color: #ededed;
-  height: 275px;
+  height: 375px;
 }
 
 .film-strip-wrapper {
@@ -59,25 +59,24 @@
 .view-all-imgs-link .camera-ic {
   margin-right: 8px;
 }
-
+.film-strip-img-wrapper {
+  width: 600px;
+}
 .film-strip-img {
   object-fit: cover;
-  width: 100%;
   margin-bottom: 0px;
 }
 
-.film-strip-img:not(:first-child) {
+/* .film-strip-img-wrapper:not(:first-child) {
   border-left: 1px solid white;
 }
-.film-strip-img:not(:last-child) {
+.film-strip-img-wrapper:not(:last-child) {
   border-right: 1px solid white;
-}
+} */
 
 @media only screen and (min-width: 960px) {
   .film-strip-img {
     object-fit: unset;
-    width: unset;
-    height: 400px;
   }
 }
 
@@ -86,5 +85,3 @@
     height: 400px;
   }
 }
-
-/* */

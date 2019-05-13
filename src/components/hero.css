@@ -41,7 +41,7 @@
   text-transform: uppercase;
   text-align: center;
   line-height: 1.2;
-  font-size: 2.75rem;
+  font-size: 1.75rem;
   font-family: 'Saira Extra Condensed', sans-serif;
 }
 .hero-text .price {
@@ -68,5 +68,8 @@
 @media screen and (min-width: 650px) {
   .hero-text {
     width: 650px;
+  }
+  .hero-text .address {
+    font-size: 2.75rem;
   }
 }

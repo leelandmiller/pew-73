@@ -13,10 +13,11 @@ const photoGridQuery = graphql`
     }, sort: { fields: name }) {
       edges {
         node {
-          id
-          name
-          publicURL
-          relativePath
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }
