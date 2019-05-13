@@ -10,7 +10,7 @@ import Agent from '../components/Agent'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-if (window !== undefined) {
+if (typeof window !== `undefined`) {
   smoothscroll.polyfill()
 }
 
