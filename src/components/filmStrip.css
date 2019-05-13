@@ -78,7 +78,6 @@
 
 @media only screen and (min-width: 960px) {
   .film-strip-img {
-    width: unset;
     object-fit: unset;
   }
 }
