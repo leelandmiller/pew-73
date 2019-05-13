@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Palomar Estates West #73`,
+    description: `2 bed, 2 bath, triple wide home in Palomar Estates West. Washer/dryer from 2014. 1 yr old coil in heater, A/C from 2004, and water heater from 2015. Roof recently replaced (2016). The home has curved poles & louvers, low maintenance landscaping, dual pane windows except on sliding glass door, and hand-textured walls inside the home. It has been freshly painted with on trend colors, and has trex steps in the front & back entrances.`,
+    author: `@leelandmiller`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -12,6 +12,28 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `homeImages`,
+        path: `${__dirname}/src/images/home`,
+      },
+    },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/data/`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Open Sans', 'Tangerine', 'Saira Extra Condensed']
+        }
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

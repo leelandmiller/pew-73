@@ -1,0 +1,31 @@
+.agent-wrapper {
+  margin-top: 64px;
+  margin-bottom: 48px;
+}
+.agent-wrapper h1 {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.agent-wrapper .logo-wrapper {
+  width: 250px;
+  margin: 0 auto;
+}
+.agent-wrapper .agent-details {
+  margin-top: 8px;
+  text-align: center;
+}
+.agent-wrapper .agent-details h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.95rem;
+  margin-bottom: 0px;
+}
+.agent-wrapper .agent-details h3 {
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 4px;
+}
+.agent-wrapper .agent-details h5 {
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 12px;
+}

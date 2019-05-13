@@ -1,0 +1,72 @@
+.hero-wrapper {
+  position: relative;
+  height: 100vh;
+}
+
+.aji-logo {
+  z-index: 100;
+  width: 300px;
+  margin: 0 auto;
+  top: 24px;
+}
+
+.hero-text {
+  height: 350px;
+  max-width: 650px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  z-index: 100;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  white-space: nowrap;
+}
+.hero-text .status {
+  background-color: rgba(60,173,151,0.9);
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  text-align: center;
+  padding: 16px;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  margin-bottom: 0px;
+}
+.hero-text .address {
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.2;
+  font-size: 2.75rem;
+  font-family: 'Saira Extra Condensed', sans-serif;
+}
+.hero-text .price {
+  font-family: 'Tangerine', cursive;
+  color: #5fe3e8;
+  font-size: 2.4rem;
+  position: absolute;
+  bottom: 56px;
+}
+
+.hero-img-wrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100%;
+}
+
+.hero-img {
+  height: 100vh;
+  width: 100%;
+}
+
+@media screen and (min-width: 650px) {
+  .hero-text {
+    width: 650px;
+  }
+}

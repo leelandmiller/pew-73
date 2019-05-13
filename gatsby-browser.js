@@ -1,7 +1,5 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+// const smoothscroll = require('smoothscroll-polyfill');
 
-// You can delete this file if you're not using it
+// exports.onClientEntry = () => {
+//   smoothscroll.polyfill();
+// }

@@ -1,0 +1,86 @@
+.pictures-page {
+  /* height: 1000px; */
+  display: flex;
+  flex-direction: column;
+}
+
+.address-bar {
+  background-color: #fff;
+  border-bottom: 1px solid #d8d8d8;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.address-bar .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.address-bar .address {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 2.75rem;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  transition: all 0.4s ease;
+}
+.address-bar .contact-info {
+  margin-top: 12px;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 1.5rem;
+  transition: all 0.4s ease;
+}
+.address-bar .contact-info .phone {
+  text-decoration: none;
+  color: #000;
+}
+.address-bar .contact-info .phone:hover {
+  text-decoration: underline;
+}
+
+.address-bar .address.price {
+  color: rgb(60,173,151);
+}
+.photo-grid-wrapper {
+  margin-top: 148px;
+  padding: 16px;
+}
+.photo-grid-wrapper .back-btn {
+  text-decoration: none;
+  color: rgb(46, 132, 243);
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+}
+.photo-grid-wrapper .back-btn:hover {
+  text-decoration: underline;
+}
+.photo-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+.photo-grid-img {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 0px;
+}
+
+@media screen and (min-width: 600px) {
+  .photo-grid-wrapper {
+    padding: 24px;
+  }
+  .photo-grid-img {
+    width: 50%;
+  }
+
+  .address-bar .row {
+    flex-direction: row;
+  }
+}

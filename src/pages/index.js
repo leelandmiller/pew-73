@@ -1,21 +1,48 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
+import smoothscroll from 'smoothscroll-polyfill';
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import About from '../components/About'
+import Hero from '../components/Hero'
+import Features from '../components/Features'
+import Photos from '../components/Photos'
+import Agent from '../components/Agent'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+smoothscroll.polyfill()
+
+export const query = graphql`
+  {
+    allKeywordsJson {
+      edges {
+        node {
+          keyword
+        }
+      }
+    }
+  }
+`
+
+const IndexPage = ({ data: { allKeywordsJson } }) => {
+  const keywords = allKeywordsJson.edges.map(edge => {
+    return edge.node.keyword
+  })
+
+  return (
+    <>
+      <Layout>
+        <SEO title="1930 W San Marcos Blvd #73"
+        keywords={keywords}
+        />
+        <Hero />
+        <About />
+        <Features />
+        <Photos />
+        <Agent />
+      </Layout>
+    </>
+  );
+}
 
 export default IndexPage
