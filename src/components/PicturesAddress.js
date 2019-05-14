@@ -46,7 +46,7 @@ const PicturesAddress = props => {
           1930 W San Marcos Blvd #73, San Marcos, CA 92078
         </h1>
         <h1 className="address price" style={priceStyle}>
-          $319,000
+          $329,000
         </h1>
       </div>
       <div className="row">
