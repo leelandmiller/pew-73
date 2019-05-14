@@ -17,17 +17,10 @@ export function useScroll() {
   return {
     pageYOffset
   };
-  // if (typeof window !== 'undefined') {
-    
-  // } else {
-  //   return {
-  //     pageYOffset: 0
-  //   }
-  // }
 }
 
 export function useResize(minWidth = 600) {
-  const [desktop, setDesktop] = useState(true);
+  const [desktop, setDesktop] = useState();
   
   const listener = e => {
     const mq = window.matchMedia(`(min-width: ${minWidth}px)`);
@@ -35,6 +28,9 @@ export function useResize(minWidth = 600) {
   }
 
   useEffect(() => {
+    if (desktop === undefined) {
+      listener();
+    }
     window.addEventListener('resize', listener);
     return () => {
       window.removeEventListener('resize', listener);
@@ -42,11 +38,4 @@ export function useResize(minWidth = 600) {
   }, []);
 
   return { desktop }
-  // if (typeof window !== 'undefined') {
-    
-  // } else {
-  //   return {
-  //     desktop: true
-  //   }
-  // }
 }
