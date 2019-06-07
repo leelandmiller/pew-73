@@ -9,6 +9,7 @@ import Photos from '../components/Photos'
 import Agent from '../components/Agent'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import OpenHouse from '../components/OpenHouse';
 
 if (typeof window !== `undefined`) {
   smoothscroll.polyfill()
@@ -38,6 +39,7 @@ const IndexPage = ({ data: { allKeywordsJson } }) => {
         keywords={keywords}
         />
         <Hero />
+        <OpenHouse/>
         <About />
         <Features />
         <Photos />

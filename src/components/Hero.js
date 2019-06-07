@@ -38,7 +38,7 @@ const Hero = () => (
             San Marcos, CA 92078
           </h1>
           <h3 className="price">
-            $299,000
+            $277,000
           </h3>
         </div>
         <div className="hero-img-wrapper">
