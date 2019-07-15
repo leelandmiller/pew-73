@@ -31,7 +31,7 @@ const Hero = () => (
         />
         <div className="hero-text">
           <h2 className="status">
-            FOR SALE
+            SOLD
           </h2>
           <h1 className="address">
             1930 W San Marcos Blvd #73<br/>
