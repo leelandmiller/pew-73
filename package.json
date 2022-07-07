@@ -21,7 +21,7 @@
     "gatsby-source-graphql": "^2.0.18",
     "gatsby-transformer-json": "^2.1.11",
     "gatsby-transformer-sharp": "^2.1.19",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-add-to-calendar": "^0.1.5",
